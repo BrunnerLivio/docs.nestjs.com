@@ -1,0 +1,112 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="healthcheckresult">HealthCheckResult</h2>
+  <label class="api-type-label interface">interface</label>
+</header>
+
+  <section class="short-description">
+    <p>The result of a health check</p>
+
+    
+  </section>
+  <section class="interface-overview">
+  <pre class="language-typescript"><code class="language-typescript">
+interface <a href="/api/terminus/HealthCheckResult" class="code-anchor highlight">HealthCheckResult</a> {
+  <a class="code-anchor" href="/api/terminus/HealthCheckResult#status"><span class="member-name">status</span>: HealthCheckStatus</a>
+  <a class="code-anchor" href="/api/terminus/HealthCheckResult#info"><span class="member-name">info</span>?: HealthIndicatorResult</a>
+  <a class="code-anchor" href="/api/terminus/HealthCheckResult#error"><span class="member-name">error</span>?: HealthIndicatorResult</a>
+  <a class="code-anchor" href="/api/terminus/HealthCheckResult#details"><span class="member-name">details</span>: HealthIndicatorResult</a>
+}</code></pre>
+
+  
+  
+
+
+  
+  
+
+</section>
+  
+
+  
+  
+  
+<section class="instance-properties">
+  <h2 id="properties">Properties</h2>
+  <table class="is-full-width list-table property-table">
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr class="instance-property">
+        <td>
+          <a id="status"></a>
+          <code><span class="member-name">status</span>: <a href="/api/terminus/HealthCheckStatus" class="code-anchor highlight">HealthCheckStatus</a></code>
+        </td>
+        <td>
+          
+          <p>The overall status of the Health Check</p>
+
+                    
+        </td>
+    </tr>
+    
+      <tr class="instance-property">
+        <td>
+          <a id="info"></a>
+          <code><span class="member-name">info</span>?: <a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a></code>
+        </td>
+        <td>
+          
+          <p>The info object contains information of each health indicator
+which is of status "up"</p>
+
+                    
+        </td>
+    </tr>
+    
+      <tr class="instance-property">
+        <td>
+          <a id="error"></a>
+          <code><span class="member-name">error</span>?: <a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a></code>
+        </td>
+        <td>
+          
+          <p>The error object contains information of each health indicator
+which is of status "down"</p>
+
+                    
+        </td>
+    </tr>
+    
+      <tr class="instance-property">
+        <td>
+          <a id="details"></a>
+          <code><span class="member-name">details</span>: <a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a></code>
+        </td>
+        <td>
+          
+          <p>The details object contains information of every health indicator.</p>
+
+                    
+        </td>
+    </tr>
+    
+    </tbody>
+  </table>
+</section>
+  
+
+
+  
+
+

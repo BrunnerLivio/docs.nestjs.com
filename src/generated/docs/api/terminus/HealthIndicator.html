@@ -1,0 +1,157 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="healthindicator">HealthIndicator</h2>
+  <label class="api-type-label class">class</label>
+</header>
+
+  <section class="short-description">
+    <p>Represents an abstract health indicator
+with common functionalities</p>
+
+    <p><a href="/api/terminus/HealthIndicator#description">See more...</a></p>
+  </section>
+  
+  <pre class="language-typescript">  <code class="language-typescript">
+abstract class <a href="/api/terminus/HealthIndicator" class="code-anchor highlight">HealthIndicator</a> {
+  <a class="code-anchor" href="/api/terminus/HealthIndicator#getStatus()">protected <span class="member-name">getStatus</span>(key: string, isHealthy: boolean, data?: { [key: string]: any; }): HealthIndicatorResult</a>
+}</code></pre>
+
+
+  
+  
+
+
+
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="instance-methods">
+  <h3 id="methods"><span><span>Methods</span></span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/HealthIndicator#methods">#</a></h3>
+  
+    <a id="getStatus()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="getstatus">
+      getStatus()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/HealthIndicator#getstatus">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="short-description">
+        <p>Generates the health indicator result object</p>
+
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+protected <span class="member-name">getStatus</span>(key: string, isHealthy: boolean, data?: { [key: string]: any; }): <a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The key which will be used as key for the result object</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>isHealthy</code>
+      </td>
+      <td class="param-type"><code>boolean</code></td>
+      <td class="param-description">
+      <p>Whether the health indicator is healthy</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>data</code>
+      </td>
+      <td class="param-type"><code>object</code></td>
+      <td class="param-description">
+      <p>Additional data which will get appended to the result object</p>
+<pre class=" language-typescript"><code class=" language-typescript">
+Optional. Default is `undefined`.</code></pre>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+  
+  <h6 class="no-anchor" id="returns">Returns</h6>
+  <p><code><a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a></code></p>
+
+  
+
+
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+</section>
+
+
+  
+<section class="description">
+  <h3 id="description"><span>Description</span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/HealthIndicator#description">#</a></h3>
+  <p>A custom HealthIndicator should inherit the <code><a href="/api/terminus/HealthIndicator" class="code-anchor highlight">HealthIndicator</a></code> class.</p>
+<pre class=" language-typescript"><code class="language-typescript language-typescript">
+class MyHealthIndicator extends <a href="/api/terminus/HealthIndicator" class="code-anchor highlight">HealthIndicator</a> {
+  public check(key: string) {
+    // Replace with the actual check
+    const isHealthy = true;
+    // Returns { [key]: { status: 'up', message: 'Up and running' } }
+    return super.getStatus(key, isHealthy, { message: 'Up and running' });
+  }
+}</code></pre>
+
+</section>
+
+
+  
+
+

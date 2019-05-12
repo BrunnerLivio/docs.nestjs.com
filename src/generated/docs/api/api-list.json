@@ -1,0 +1,135 @@
+[
+  {
+    "name": "terminus/lib",
+    "title": "terminus",
+    "path": "/api/terminus",
+    "items": [
+      {
+        "name": "connectionnotfounderror",
+        "title": "ConnectionNotFoundError",
+        "path": "/api/terminus/ConnectionNotFoundError",
+        "docType": "class"
+      },
+      {
+        "name": "diskhealthindicator",
+        "title": "DiskHealthIndicator",
+        "path": "/api/terminus/DiskHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "diskhealthindicatoroptions",
+        "title": "DiskHealthIndicatorOptions",
+        "path": "/api/terminus/DiskHealthIndicatorOptions",
+        "docType": "type-alias"
+      },
+      {
+        "name": "grpchealthindicator",
+        "title": "GRPCHealthIndicator",
+        "path": "/api/terminus/GRPCHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "healthcheckresult",
+        "title": "HealthCheckResult",
+        "path": "/api/terminus/HealthCheckResult",
+        "docType": "interface"
+      },
+      {
+        "name": "healthcheckstatus",
+        "title": "HealthCheckStatus",
+        "path": "/api/terminus/HealthCheckStatus",
+        "docType": "type-alias"
+      },
+      {
+        "name": "healthindicator",
+        "title": "HealthIndicator",
+        "path": "/api/terminus/HealthIndicator",
+        "docType": "class"
+      },
+      {
+        "name": "healthindicatorfunction",
+        "title": "HealthIndicatorFunction",
+        "path": "/api/terminus/HealthIndicatorFunction",
+        "docType": "type-alias"
+      },
+      {
+        "name": "healthindicatorresult",
+        "title": "HealthIndicatorResult",
+        "path": "/api/terminus/HealthIndicatorResult",
+        "docType": "type-alias"
+      },
+      {
+        "name": "healthindicatorstatus",
+        "title": "HealthIndicatorStatus",
+        "path": "/api/terminus/HealthIndicatorStatus",
+        "docType": "type-alias"
+      },
+      {
+        "name": "httphealthindicator",
+        "title": "HttpHealthIndicator",
+        "path": "/api/terminus/HttpHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "memoryhealthindicator",
+        "title": "MemoryHealthIndicator",
+        "path": "/api/terminus/MemoryHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "microservicehealthindicator",
+        "title": "MicroserviceHealthIndicator",
+        "path": "/api/terminus/MicroserviceHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "mikroormhealthindicator",
+        "title": "MikroOrmHealthIndicator",
+        "path": "/api/terminus/MikroOrmHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "mongoosehealthindicator",
+        "title": "MongooseHealthIndicator",
+        "path": "/api/terminus/MongooseHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "sequelizehealthindicator",
+        "title": "SequelizeHealthIndicator",
+        "path": "/api/terminus/SequelizeHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "storageexceedederror",
+        "title": "StorageExceededError",
+        "path": "/api/terminus/StorageExceededError",
+        "docType": "class"
+      },
+      {
+        "name": "terminusmodule",
+        "title": "TerminusModule",
+        "path": "/api/terminus/TerminusModule",
+        "docType": "nestmodule"
+      },
+      {
+        "name": "timeouterror",
+        "title": "TimeoutError",
+        "path": "/api/terminus/TimeoutError",
+        "docType": "class"
+      },
+      {
+        "name": "typeormhealthindicator",
+        "title": "TypeOrmHealthIndicator",
+        "path": "/api/terminus/TypeOrmHealthIndicator",
+        "docType": "injectable"
+      },
+      {
+        "name": "unhealthyresponsecodeerror",
+        "title": "UnhealthyResponseCodeError",
+        "path": "/api/terminus/UnhealthyResponseCodeError",
+        "docType": "class"
+      }
+    ]
+  }
+]

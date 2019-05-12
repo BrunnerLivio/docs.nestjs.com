@@ -1,0 +1,169 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="diskhealthindicator">DiskHealthIndicator</h2>
+  <label class="api-type-label injectable">injectable</label>
+</header>
+
+  <section class="short-description">
+    <p>The DiskHealthIndicator contains checks which are related
+to the disk storage of the current running machine</p>
+
+    
+  </section>
+  
+  <pre class="language-typescript">  <code class="language-typescript">
+class <a href="/api/terminus/DiskHealthIndicator" class="code-anchor highlight">DiskHealthIndicator</a> extends <a class="code-anchor" href="/api/terminus/HealthIndicator">HealthIndicator</a> {
+  <a class="code-anchor" href="/api/terminus/DiskHealthIndicator#checkStorage()"><span class="member-name">checkStorage</span>(key: string, options: (Without&#x3C;DiskOptionsWithThreshold, DiskOptionsWithThresholdPercent> &#x26; DiskOptionsBase &#x26; DiskOptionsThresholdPercent) | (Without&#x3C;DiskOptionsWithThresholdPercent, DiskOptionsWithThreshold> &#x26; DiskOptionsBase &#x26; DiskOptionsThreshold)): Promise&#x3C;HealthIndicatorResult></a>
+
+  // inherited from <a class="code-anchor" href="/api/terminus/HealthIndicator">terminus/lib/HealthIndicator</a>
+  <a class="code-anchor" href="/api/terminus/HealthIndicator#getStatus()">protected <span class="member-name">getStatus</span>(key: string, isHealthy: boolean, data?: { [key: string]: any; }): HealthIndicatorResult</a>
+}</code></pre>
+
+
+  
+  
+
+
+
+  
+
+  
+  <h3 id="module"><span>Module</span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/DiskHealthIndicator#module">#</a></h3>
+<ul class="modules-list">
+
+  <li>
+    <a href="/api/terminus/TerminusModule">
+      <code>TerminusModule</code>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="instance-methods">
+  <h3 id="methods"><span><span>Methods</span></span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/DiskHealthIndicator#methods">#</a></h3>
+  
+    <a id="checkStorage()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="checkstorage">
+      checkStorage()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/DiskHealthIndicator#checkstorage">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="short-description">
+        <p>Checks if the size of the given size has exceeded the
+given threshold</p>
+
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+<span class="member-name">checkStorage</span>(key: string, options: (Without&#x3C;DiskOptionsWithThreshold, DiskOptionsWithThresholdPercent> &#x26; DiskOptionsBase &#x26; DiskOptionsThresholdPercent) | (Without&#x3C;DiskOptionsWithThresholdPercent, DiskOptionsWithThreshold> &#x26; DiskOptionsBase &#x26; DiskOptionsThreshold)): Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The key which will be used for the result object</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>options</code>
+      </td>
+      <td class="param-type"><code>(Without<diskoptionswiththreshold, diskoptionswiththresholdpercent=""> &#x26; DiskOptionsBase &#x26; DiskOptionsThresholdPercent) | (Without<diskoptionswiththresholdpercent, diskoptionswiththreshold=""> &#x26; DiskOptionsBase &#x26; DiskOptionsThreshold)</diskoptionswiththresholdpercent,></diskoptionswiththreshold,></code></td>
+      <td class="param-description">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+    <h4 class="no-anchor" id="examples">Examples</h4>
+    
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+// The used disk storage should not exceed 250 GB
+diskHealthIndicator.checkStorage('storage', { threshold: 250 * 1024 * 1024 * 1024, path: '/' });</code></pre>
+</div>
+  
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+// The used disk storage should not exceed 50% of the full disk size
+diskHealthIndicator.checkStorage('storage', { thresholdPercent: 0.5, path: 'C:\\' });</code></pre>
+</div>
+  
+  
+  
+  <h6 class="no-anchor" id="returns">Returns</h6>
+  <p><code>Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code>: The result of the health indicator check</p>
+
+  
+
+
+  
+  <h6 class="no-anchor" id="throws">Throws</h6>
+  
+  <p><code><a href="/api/terminus/HealthCheckError" class="code-anchor highlight">HealthCheckError</a></code> In case the health indicator failed</p>
+
+  
+  <p><code><a href="/api/terminus/StorageExceededError" class="code-anchor highlight">StorageExceededError</a></code> In case the disk storage has exceeded the given threshold</p>
+
+  
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+</section>
+
+
+
+  
+
+

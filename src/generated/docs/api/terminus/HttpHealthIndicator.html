@@ -1,0 +1,257 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="httphealthindicator">HttpHealthIndicator</h2>
+  <label class="api-type-label injectable">injectable</label>
+</header>
+
+  <section class="short-description">
+    <p>The HTTPHealthIndicator contains health indicators
+which are used for health checks related to HTTP requests</p>
+
+    
+  </section>
+  
+  <pre class="language-typescript">  <code class="language-typescript">
+class <a href="/api/terminus/HttpHealthIndicator" class="code-anchor highlight">HttpHealthIndicator</a> extends <a class="code-anchor" href="/api/terminus/HealthIndicator">HealthIndicator</a> {
+  <a class="code-anchor" href="/api/terminus/HttpHealthIndicator#pingCheck()"><span class="member-name">pingCheck</span>(key: string, url: string, __2: AxiosRequestConfig &#x26; { httpClient?: HttpClientLike; } = {}): Promise&#x3C;HealthIndicatorResult></a>
+  <a class="code-anchor" href="/api/terminus/HttpHealthIndicator#responseCheck()"><span class="member-name">responseCheck</span>&#x3C;T>(key: string, url: any, callback: (response: AxiosResponse&#x3C;T>) => boolean | Promise&#x3C;boolean>, __3: AxiosRequestConfig &#x26; { httpClient?: HttpClientLike; } = {}): Promise&#x3C;HealthIndicatorResult></a>
+
+  // inherited from <a class="code-anchor" href="/api/terminus/HealthIndicator">terminus/lib/HealthIndicator</a>
+  <a class="code-anchor" href="/api/terminus/HealthIndicator#getStatus()">protected <span class="member-name">getStatus</span>(key: string, isHealthy: boolean, data?: { [key: string]: any; }): HealthIndicatorResult</a>
+}</code></pre>
+
+
+  
+  
+
+
+
+  
+
+  
+  <h3 id="module"><span>Module</span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/HttpHealthIndicator#module">#</a></h3>
+<ul class="modules-list">
+
+  <li>
+    <a href="/api/terminus/TerminusModule">
+      <code>TerminusModule</code>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="instance-methods">
+  <h3 id="methods"><span><span>Methods</span></span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/HttpHealthIndicator#methods">#</a></h3>
+  
+    <a id="pingCheck()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="pingcheck">
+      pingCheck()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/HttpHealthIndicator#pingcheck">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="short-description">
+        <p>Checks if the given url response in the given timeout
+and returns a result object corresponding to the result</p>
+
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+<span class="member-name">pingCheck</span>(key: string, url: string, __2: AxiosRequestConfig &#x26; { httpClient?: HttpClientLike; } = {}): Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The key which will be used for the result object</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>url</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The url which should be request</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>__2</code>
+      </td>
+      <td class="param-type"><code>AxiosRequestConfig &#x26; { httpClient?: HttpClientLike; }</code></td>
+      <td class="param-description">
+            <p>Optional. Default is <code>{}</code>.</p>
+      
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+    <h4 class="no-anchor" id="examples">Examples</h4>
+    
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+httpHealthIndicator.pingCheck('google', 'https://google.com', { timeout: 800 })</code></pre>
+</div>
+  
+  
+  
+  <h6 class="no-anchor" id="returns">Returns</h6>
+  <p><code>Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></p>
+
+  
+
+
+  
+  <h6 class="no-anchor" id="throws">Throws</h6>
+  
+  <p><code><a href="/api/terminus/HealthCheckError" class="code-anchor highlight">HealthCheckError</a></code> In case the health indicator failed</p>
+
+  
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+    <a id="responseCheck()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="responsecheck">
+      responseCheck()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/HttpHealthIndicator#responsecheck">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+<span class="member-name">responseCheck</span>&#x3C;T>(key: string, url: any, callback: (response: AxiosResponse&#x3C;T>) => boolean | Promise&#x3C;boolean>, __3: AxiosRequestConfig &#x26; { httpClient?: HttpClientLike; } = {}): Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters-1">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>url</code>
+      </td>
+      <td class="param-type"><code>any</code></td>
+      <td class="param-description">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>callback</code>
+      </td>
+      <td class="param-type"><code>(response: AxiosResponse<t>) => boolean | Promise<boolean></boolean></t></code></td>
+      <td class="param-description">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>__3</code>
+      </td>
+      <td class="param-type"><code>AxiosRequestConfig &#x26; { httpClient?: HttpClientLike; }</code></td>
+      <td class="param-description">
+            <p>Optional. Default is <code>{}</code>.</p>
+      
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+  
+  <h6 class="no-anchor" id="returns-1">Returns</h6>
+  <p><code>Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></p>
+
+  
+
+
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+</section>
+
+
+
+  
+
+

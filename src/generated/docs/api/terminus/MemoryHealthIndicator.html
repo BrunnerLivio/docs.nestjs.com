@@ -1,0 +1,248 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="memoryhealthindicator">MemoryHealthIndicator</h2>
+  <label class="api-type-label injectable">injectable</label>
+</header>
+
+  <section class="short-description">
+    <p>The MemoryHealthIndicator contains checks which are related
+to the memory storage of the current running machine</p>
+
+    
+  </section>
+  
+  <pre class="language-typescript">  <code class="language-typescript">
+class <a href="/api/terminus/MemoryHealthIndicator" class="code-anchor highlight">MemoryHealthIndicator</a> extends <a class="code-anchor" href="/api/terminus/HealthIndicator">HealthIndicator</a> {
+  <a class="code-anchor" href="/api/terminus/MemoryHealthIndicator#checkHeap()"><span class="member-name">checkHeap</span>(key: string, heapUsedThreshold: number): Promise&#x3C;HealthIndicatorResult></a>
+  <a class="code-anchor" href="/api/terminus/MemoryHealthIndicator#checkRSS()"><span class="member-name">checkRSS</span>(key: string, rssThreshold: number): Promise&#x3C;HealthIndicatorResult></a>
+
+  // inherited from <a class="code-anchor" href="/api/terminus/HealthIndicator">terminus/lib/HealthIndicator</a>
+  <a class="code-anchor" href="/api/terminus/HealthIndicator#getStatus()">protected <span class="member-name">getStatus</span>(key: string, isHealthy: boolean, data?: { [key: string]: any; }): HealthIndicatorResult</a>
+}</code></pre>
+
+
+  
+  
+
+
+
+  
+
+  
+  <h3 id="module"><span>Module</span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/MemoryHealthIndicator#module">#</a></h3>
+<ul class="modules-list">
+
+  <li>
+    <a href="/api/terminus/TerminusModule">
+      <code>TerminusModule</code>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="instance-methods">
+  <h3 id="methods"><span><span>Methods</span></span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/MemoryHealthIndicator#methods">#</a></h3>
+  
+    <a id="checkHeap()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="checkheap">
+      checkHeap()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/MemoryHealthIndicator#checkheap">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="short-description">
+        <p>Checks the heap space and returns the status</p>
+
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+<span class="member-name">checkHeap</span>(key: string, heapUsedThreshold: number): Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The key which will be used for the result object</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>heapUsedThreshold</code>
+      </td>
+      <td class="param-type"><code>number</code></td>
+      <td class="param-description">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+    <h4 class="no-anchor" id="examples">Examples</h4>
+    
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+// The process should not use more than 150MB memory
+memoryHealthIndicator.checkHeap('memory_heap', 150 * 1024 * 1024);</code></pre>
+</div>
+  
+  
+  
+  <h6 class="no-anchor" id="returns">Returns</h6>
+  <p><code>Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code>: The result of the health indicator check</p>
+
+  
+
+
+  
+  <h6 class="no-anchor" id="throws">Throws</h6>
+  
+  <p><code><a href="/api/terminus/StorageExceededError" class="code-anchor highlight">StorageExceededError</a></code> In case the heap has exceeded the given threshold</p>
+
+  
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+    <a id="checkRSS()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="checkrss">
+      checkRSS()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/MemoryHealthIndicator#checkrss">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="short-description">
+        <p>Checks the rss space and returns the status</p>
+
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+<span class="member-name">checkRSS</span>(key: string, rssThreshold: number): Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters-1">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The key which will be used for the result object</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>rssThreshold</code>
+      </td>
+      <td class="param-type"><code>number</code></td>
+      <td class="param-description">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+    <h4 class="no-anchor" id="examples-1">Examples</h4>
+    
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+// The process should not have more than 150MB allocated
+memoryHealthIndicator.checkRSS('memory_rss', 150 * 1024 * 1024);</code></pre>
+</div>
+  
+  
+  
+  <h6 class="no-anchor" id="returns-1">Returns</h6>
+  <p><code>Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code>: The result of the health indicator check</p>
+
+  
+
+
+  
+  <h6 class="no-anchor" id="throws-1">Throws</h6>
+  
+  <p><code><a href="/api/terminus/StorageExceededError" class="code-anchor highlight">StorageExceededError</a></code> In case the rss has exceeded the given threshold</p>
+
+  
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+</section>
+
+
+
+  
+
+

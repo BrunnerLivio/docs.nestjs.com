@@ -1,0 +1,257 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="terminusmodule">TerminusModule</h2>
+  <label class="api-type-label nestmodule">module</label>
+</header>
+
+  <section class="short-description">
+    <p>The Terminus module integrates health checks
+and graceful shutdowns in your Nest application</p>
+
+    
+  </section>
+  
+  <pre class="language-typescript">  <code class="language-typescript">
+class <a href="/api/terminus/TerminusModule" class="code-anchor highlight">TerminusModule</a> {
+  <a class="code-anchor" href="/api/terminus/TerminusModule#forRoot()">static <span class="member-name">forRoot</span>(options: TerminusModuleOptions = { errorLogStyle: 'json' }): DynamicModule</a>
+}</code></pre>
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+<section class="static-methods">
+  <h3 id="static-methods"><span><span>Static methods</span></span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/TerminusModule#static-methods">#</a></h3>
+  
+    <a id="forRoot()"></a>
+<table class="is-full-width method-table static-method">
+  <thead><tr><th>
+    <h3 id="forroot">
+      forRoot()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/TerminusModule#forroot">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+static <span class="member-name">forRoot</span>(options: <a href="/api/terminus/TerminusModuleOptions" class="code-anchor highlight">TerminusModuleOptions</a> = { errorLogStyle: 'json' }): DynamicModule</code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters">Parameters</h4>
+  <table class="is-full-width list-table parameters-table static-method-overload-parameters">
+  <tbody>
+  <tr class="static-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>options</code>
+      </td>
+      <td class="param-type"><code><a href="/api/terminus/TerminusModuleOptions" class="code-anchor highlight">TerminusModuleOptions</a></code></td>
+      <td class="param-description">
+            <p>Optional. Default is <code>{ errorLogStyle: 'json' }</code>.</p>
+      
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+  
+  <h6 class="no-anchor" id="returns">Returns</h6>
+  <p><code>DynamicModule</code></p>
+
+  
+
+
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+</section>
+
+  
+
+  
+
+
+  
+
+
+  
+    
+<section class="injectables">
+  <h3 id="injectables"><span>Injectables</span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/TerminusModule#injectables">#</a></h3>
+  <table class="is-full-width list-table injectable-table">
+    <thead>
+      <tr><th>Name</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/DiskHealthIndicator">
+            <code>DiskHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The DiskHealthIndicator contains checks which are related
+to the disk storage of the current running machine</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/GRPCHealthIndicator">
+            <code>GRPCHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The <code><a href="/api/terminus/GRPCHealthIndicator" class="code-anchor highlight">GRPCHealthIndicator</a></code> is used for health checks
+related to GRPC</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/HttpHealthIndicator">
+            <code>HttpHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The HTTPHealthIndicator contains health indicators
+which are used for health checks related to HTTP requests</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/MemoryHealthIndicator">
+            <code>MemoryHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The MemoryHealthIndicator contains checks which are related
+to the memory storage of the current running machine</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/MicroserviceHealthIndicator">
+            <code>MicroserviceHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The MicroserviceHealthIndicator is a health indicators
+which is used for health checks related to microservices</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/MikroOrmHealthIndicator">
+            <code>MikroOrmHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The MikroOrmHealthIndicator contains health indicators
+which are used for health checks related to MikroOrm</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/MongooseHealthIndicator">
+            <code>MongooseHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The MongooseHealthIndicator contains health indicators
+which are used for health checks related to Mongoose</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/SequelizeHealthIndicator">
+            <code>SequelizeHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The SequelizeHealthIndicator contains health indicators
+which are used for health checks related to Sequelize</p>
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <a href="/api/terminus/TypeOrmHealthIndicator">
+            <code>TypeOrmHealthIndicator</code>
+          </a>
+        </td>
+        <td>
+          
+          <p>The TypeOrmHealthIndicator contains health indicators
+which are used for health checks related to TypeOrm</p>
+
+        </td>
+      </tr>
+    
+    </tbody>
+  </table>
+</section>
+
+  
+
+
+
+  
+
+

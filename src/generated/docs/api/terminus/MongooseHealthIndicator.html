@@ -1,0 +1,156 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="mongoosehealthindicator">MongooseHealthIndicator</h2>
+  <label class="api-type-label injectable">injectable</label>
+</header>
+
+  <section class="short-description">
+    <p>The MongooseHealthIndicator contains health indicators
+which are used for health checks related to Mongoose</p>
+
+    
+  </section>
+  
+  <pre class="language-typescript">  <code class="language-typescript">
+class <a href="/api/terminus/MongooseHealthIndicator" class="code-anchor highlight">MongooseHealthIndicator</a> extends <a class="code-anchor" href="/api/terminus/HealthIndicator">HealthIndicator</a> {
+  <a class="code-anchor" href="/api/terminus/MongooseHealthIndicator#pingCheck()"><span class="member-name">pingCheck</span>(key: string, options: MongoosePingCheckSettings = {}): Promise&#x3C;HealthIndicatorResult></a>
+
+  // inherited from <a class="code-anchor" href="/api/terminus/HealthIndicator">terminus/lib/HealthIndicator</a>
+  <a class="code-anchor" href="/api/terminus/HealthIndicator#getStatus()">protected <span class="member-name">getStatus</span>(key: string, isHealthy: boolean, data?: { [key: string]: any; }): HealthIndicatorResult</a>
+}</code></pre>
+
+
+  
+  
+
+
+
+  
+
+  
+  <h3 id="module"><span>Module</span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/MongooseHealthIndicator#module">#</a></h3>
+<ul class="modules-list">
+
+  <li>
+    <a href="/api/terminus/TerminusModule">
+      <code>TerminusModule</code>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="instance-methods">
+  <h3 id="methods"><span><span>Methods</span></span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/MongooseHealthIndicator#methods">#</a></h3>
+  
+    <a id="pingCheck()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="pingcheck">
+      pingCheck()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/MongooseHealthIndicator#pingcheck">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="short-description">
+        <p>Checks if the MongoDB responds in (default) 1000ms and
+returns a result object corresponding to the result</p>
+
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+<span class="member-name">pingCheck</span>(key: string, options: <a href="/api/terminus/MongoosePingCheckSettings" class="code-anchor highlight">MongoosePingCheckSettings</a> = {}): Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The key which will be used for the result object</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>options</code>
+      </td>
+      <td class="param-type"><code><a href="/api/terminus/MongoosePingCheckSettings" class="code-anchor highlight">MongoosePingCheckSettings</a></code></td>
+      <td class="param-description">
+      <p>The options for the ping</p>
+<pre class=" language-typescript"><code class=" language-typescript">
+Optional. Default is `{}`.</code></pre>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+    <h4 class="no-anchor" id="examples">Examples</h4>
+    
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+mongooseHealthIndicator.pingCheck('mongodb', { timeout: 1500 });</code></pre>
+</div>
+  
+  
+  
+  <h6 class="no-anchor" id="returns">Returns</h6>
+  <p><code>Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></p>
+
+  
+
+
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  
+
+  
+    </tbody>
+</table>
+
+  
+</section>
+
+
+
+  
+
+

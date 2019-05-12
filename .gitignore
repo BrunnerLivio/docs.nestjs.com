@@ -8,6 +8,7 @@ dist/*
 
 /tmp
 /out-tsc
+/src/app/homepage/api/pages/*
 
 # dependencies
 /node_modules

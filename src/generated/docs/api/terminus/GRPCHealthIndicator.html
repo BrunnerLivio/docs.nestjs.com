@@ -1,0 +1,206 @@
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+      <a href="/api">API</a> > <a href="/api/terminus">@nestjs/terminus</a>
+  </div>
+</div>
+<header class="api-header">
+  <h2 id="grpchealthindicator">GRPCHealthIndicator</h2>
+  <label class="api-type-label injectable">injectable</label>
+</header>
+
+  <section class="short-description">
+    <p>The <code><a href="/api/terminus/GRPCHealthIndicator" class="code-anchor highlight">GRPCHealthIndicator</a></code> is used for health checks
+related to GRPC</p>
+
+    
+  </section>
+  
+  <pre class="language-typescript">  <code class="language-typescript">
+class <a href="/api/terminus/GRPCHealthIndicator" class="code-anchor highlight">GRPCHealthIndicator</a> extends <a class="code-anchor" href="/api/terminus/HealthIndicator">HealthIndicator</a> {
+  <a class="code-anchor" href="/api/terminus/GRPCHealthIndicator#checkService()"><span class="member-name">checkService</span>&#x3C;GrpcOptions extends GrpcClientOptionsLike = GrpcClientOptionsLike>(key: string, service: string, options: CheckGRPCServiceOptions&#x3C;GrpcOptions> = {}): Promise&#x3C;HealthIndicatorResult></a>
+
+  // inherited from <a class="code-anchor" href="/api/terminus/HealthIndicator">terminus/lib/HealthIndicator</a>
+  <a class="code-anchor" href="/api/terminus/HealthIndicator#getStatus()">protected <span class="member-name">getStatus</span>(key: string, isHealthy: boolean, data?: { [key: string]: any; }): HealthIndicatorResult</a>
+}</code></pre>
+
+
+  
+  
+
+
+
+  
+
+  
+  <h3 id="module"><span>Module</span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/GRPCHealthIndicator#module">#</a></h3>
+<ul class="modules-list">
+
+  <li>
+    <a href="/api/terminus/TerminusModule">
+      <code>TerminusModule</code>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="instance-methods">
+  <h3 id="methods"><span><span>Methods</span></span><a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/GRPCHealthIndicator#methods">#</a></h3>
+  
+    <a id="checkService()"></a>
+<table class="is-full-width method-table instance-method">
+  <thead><tr><th>
+    <h3 id="checkservice">
+      checkService()
+      
+    <a title="Link to this heading" class="header-link" aria-hidden="true" href="/api/terminus/GRPCHealthIndicator#checkservice">#</a></h3>
+  </th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="short-description">
+        <p>Checks if the given service is up using the standard health check
+specification of GRPC.</p>
+
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        <div class="overload-info">
+  
+  <pre class="language-typescript"><code class="language-typescript">
+<span class="member-name">checkService</span>&#x3C;GrpcOptions extends GrpcClientOptionsLike = GrpcClientOptionsLike>(key: string, service: string, options: <a href="/api/terminus/CheckGRPCServiceOptions" class="code-anchor highlight">CheckGRPCServiceOptions</a>&#x3C;GrpcOptions> = {}): Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></pre>
+  
+
+  <h4 class="no-anchor" id="parameters">Parameters</h4>
+  <table class="is-full-width list-table parameters-table instance-method-overload-parameters">
+  <tbody>
+  <tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>key</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The key which will be used for the result object</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>service</code>
+      </td>
+      <td class="param-type"><code>string</code></td>
+      <td class="param-description">
+      <p>The service which should be checked</p>
+
+      </td>
+    </tr><tr class="instance-method-overload-parameter">
+      <td class="param-name">
+        <a id=""></a>
+        <code>options</code>
+      </td>
+      <td class="param-type"><code>CheckGRPCOptions</code></td>
+      <td class="param-description">
+      <p>Configuration for the request</p>
+<pre class=" language-typescript"><code class=" language-typescript">
+Optional. Default is `{}`.</code></pre>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+    <h4 class="no-anchor" id="examples">Examples</h4>
+    
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+grpc.checkService('hero_service', 'hero.health.v1')</code></pre>
+</div>
+  
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+// Change the timeout
+grpc.checkService('hero_service', 'hero.health.v1', { timeout: 300 })</code></pre>
+</div>
+  
+<div class="example-info">
+  <pre class="language-typescript">    <code class="language-typescript">
+// You can customize the health check
+// by giving these options. Nonetheless it is still seen
+// as best practice to implement the recommended GRPC specs
+grpc.checkService('hero_service', 'hero.health.v1', {
+  timeout: 500,
+  package: 'grpc.health.v2',
+  protoPath: join(__dirname, './protos/my-custom-health.v1'),
+  // The name of the service you need for the health check
+  healthServiceName: 'Health',
+  // Your custom function which checks the service
+  healthServiceCheck: (healthService: any, service: string) =>
+    healthService.check({ service }).toPromise(),
+})</code></pre>
+</div>
+  
+  
+  
+  <h6 class="no-anchor" id="returns">Returns</h6>
+  <p><code>Promise&#x3C;<a href="/api/terminus/HealthIndicatorResult" class="code-anchor highlight">HealthIndicatorResult</a>></code></p>
+
+  
+
+
+  
+  <h6 class="no-anchor" id="throws">Throws</h6>
+  
+  <p><code><a href="/api/terminus/HealthCheckError" class="code-anchor highlight">HealthCheckError</a></code> Gets thrown in case a health check failed</p>
+
+  
+  <p><code><a href="/api/terminus/TimeoutError" class="code-anchor highlight">TimeoutError</a></code> Gets thrown in case a health check exceeded the given timeout</p>
+
+  
+  <p><code><a href="/api/terminus/UnhealthyResponseCodeError" class="code-anchor highlight">UnhealthyResponseCodeError</a></code> Gets thrown in case the received response is unhealthy</p>
+
+  
+  
+
+  
+</div>
+      </td>
+    </tr>
+  
+  <tr>
+      <td class="description">
+        <p><a href="https://github.com/grpc/grpc/blob/master/doc/health-checking.md">https://github.com/grpc/grpc/blob/master/doc/health-checking.md</a></p>
+
+      </td>
+    </tr>
+
+  
+    </tbody>
+</table>
+
+  
+</section>
+
+
+
+  
+
+
