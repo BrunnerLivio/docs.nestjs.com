@@ -20,7 +20,8 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
-              "src/_redirects"
+              "src/_redirects",
+              "src/generated"
             ],
             "styles": [
               "src/styles.scss"
@@ -83,7 +84,8 @@
             ],
             "assets": [
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              "src/generated"
             ]
           }
         },
