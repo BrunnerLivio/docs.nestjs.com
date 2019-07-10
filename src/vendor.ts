@@ -1,5 +1,4 @@
 import 'prismjs/prism';
-import 'prismjs/plugins/keep-markup/prism-keep-markup';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-graphql';
 import 'prismjs/components/prism-json';
