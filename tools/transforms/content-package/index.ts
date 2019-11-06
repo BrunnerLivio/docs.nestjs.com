@@ -1,7 +1,6 @@
 import { Package } from 'dgeni';
 import { Document } from '../shared';
 import {
-  computeOutputPathProcessor,
   computeWhoUsesProcessor,
   extractContentTitleProcessor,
 } from './processors';
@@ -17,7 +16,6 @@ export default new Package('content', [])
   .factory(nestjsMarkedNunjucksFilter)
 
   .processor(extractContentTitleProcessor)
-  .processor(computeOutputPathProcessor)
   .processor(computeWhoUsesProcessor)
 
   .config((readFilesProcessor: any, contentFileReader: ContentFileReader) => {

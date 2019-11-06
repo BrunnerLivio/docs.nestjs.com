@@ -22,9 +22,7 @@
       <a
         *ngIf="!item.externalUrl"
         [class.pending]="item.isPending"
-        [routerLink]="item.path"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
+        [href]="item.path"
         ><i class="material-icons" *ngIf="item.icon">
           {{ item.icon }}
         </i>
@@ -46,9 +44,7 @@
   <div class="heading">
     <a
       *ngIf="!externalUrl"
-      [routerLink]="path"
       routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
       [class.has-icon]="icon"
       ><h3>
         <i class="material-icons" *ngIf="icon">

@@ -12,7 +12,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
   @Input()
   isSidebarOpened = true;
   readonly items = [
@@ -201,35 +201,34 @@ export class MenuComponent implements OnInit {
   ];
 
   constructor(
-    private readonly route: ActivatedRoute,
-    private readonly router: Router
+    // private readonly router: Router
   ) {}
 
-  ngOnInit() {
-    this.router.events
-      .filter(event => event instanceof NavigationEnd)
-      .subscribe(event => this.toggleCategory());
+  // ngOnInit() {
+  //   this.router.events
+  //     .filter(event => event instanceof NavigationEnd)
+  //     .subscribe(event => this.toggleCategory());
 
-    this.toggleCategory();
-  }
+  //   this.toggleCategory();
+  // }
 
-  toggleCategory() {
-    const { firstChild } = this.route.snapshot;
-    if (
-      (firstChild.url && firstChild.url[1]) ||
-      (firstChild.url &&
-        firstChild.routeConfig &&
-        firstChild.routeConfig.loadChildren)
-    ) {
-      const { path } = firstChild.url[0];
-      const index = this.items.findIndex(
-        ({ title }) => title.toLowerCase() === path
-      );
-      if (index < 0) {
-        return;
-      }
-      this.items[index].isOpened = true;
-      this.items[1].isOpened = false;
-    }
-  }
+  // toggleCategory() {
+  //   const { firstChild } = this.route.snapshot;
+  //   if (
+  //     (firstChild.url && firstChild.url[1]) ||
+  //     (firstChild.url &&
+  //       firstChild.routeConfig &&
+  //       firstChild.routeConfig.loadChildren)
+  //   ) {
+  //     const { path } = firstChild.url[0];
+  //     const index = this.items.findIndex(
+  //       ({ title }) => title.toLowerCase() === path
+  //     );
+  //     if (index < 0) {
+  //       return;
+  //     }
+  //     this.items[index].isOpened = true;
+  //     this.items[1].isOpened = false;
+  //   }
+  // }
 }

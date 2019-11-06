@@ -48,6 +48,6 @@ export default new Package('nestjs-content', [
       ]
     );
   })
-  // .config((convertToJsonProcessor: ConvertToJsonProcessor) => {
-  //   convertToJsonProcessor.docTypes.push('content');
-  // });
+  .config((convertToJsonProcessor: ConvertToJsonProcessor) => {
+    convertToJsonProcessor.docTypes.push('content');
+  });
