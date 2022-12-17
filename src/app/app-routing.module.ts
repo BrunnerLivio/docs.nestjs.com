@@ -180,8 +180,9 @@ const routes: Routes = [
       },
       {
         path: 'api',
-        loadChildren: './homepage/api/api.module#ApiModule',
-      }
+        loadChildren: () =>
+          import('./homepage/api/api.module').then((m) => m.ApiModule),
+      },
     ],
   },
   {
